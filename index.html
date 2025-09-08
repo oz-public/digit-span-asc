@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending Digit Span Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ascending Digit Span Game</h1>
+            <p>Remember only the digits that are bigger than the previous one!</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="slider-group">
+                    <label for="digitCount">Number of Digits: <span id="digitCountValue">7</span></label>
+                    <input type="range" id="digitCount" min="3" max="15" value="7">
+                </div>
+                
+                <div class="slider-group">
+                    <label for="interval">Interval (ms): <span id="intervalValue">500</span></label>
+                    <input type="range" id="interval" min="200" max="1000" value="500" step="50">
+                </div>
+                
+                <div class="button-group">
+                    <button id="startBtn" class="btn btn-start">Start Game</button>
+                    <button id="stopBtn" class="btn btn-stop" disabled>Stop Game</button>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <div id="digitDisplay" class="digit-display">
+                    <span class="ready-text">Click Start to begin!</span>
+                </div>
+                
+                <div id="inputSection" class="input-section hidden">
+                    <h3>Enter the ascending digits you saw:</h3>
+                    <input type="text" id="userInput" placeholder="Enter digits: 1 3 4 6 or 1346">
+                    <button id="submitBtn" class="btn btn-submit">Submit Answer</button>
+                </div>
+                
+                <div id="results" class="results hidden">
+                    <div id="feedback"></div>
+                    <button id="playAgainBtn" class="btn btn-primary">Play Again</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
